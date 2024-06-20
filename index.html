@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>web</title>
+    <style>
+      body{
+        --orange:rgb(220, 95, 0);
+        --dark:rgb(55, 58, 64);
+        --medium:rgb(104, 109, 118);
+        --light-medium:rgb(190, 190, 190);
+        --light:rgb(238, 238, 238);
+        background-color: var(--light);
+      }
+      .title{
+        position: sticky;
+        z-index: 40;
+        box-sizing: border-box;
+        background-color: var(--dark);
+        display: flex;
+        height: 70px;
+        width: 100%;
+        margin: 0px;
+        align-items: center;
+        justify-content: space-between;
+        border-color: var(--orange);
+        border-style: solid;
+        padding: 0px;
+        border-width: 8px;
+        border-top-width: 0px;
+        border-bottom-width: 0px;
+
+      }
+      .up-button{
+        width: 100px;
+        aspect-ratio: 1/1;
+        background-color: var(--light);
+        border-radius: 30px;
+        border-width: 0px;
+        transform:scale(0.4);
+        transition: transform .2s cubic-bezier(0.2,-1,0.4,3);
+        &:hover{
+          transform:scale(0.45);
+        }
+        
+      }
+      .up-input{
+        height: 44px;
+        width: 340px;
+        overflow: hidden;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--light);
+        border-color: var(--orange);
+        border-style: solid;
+        padding-right: 12px;
+        padding-left: 20px;
+        border-radius:12px;
+        border-width: 5px;
+        border-top-width: 0px;
+        border-bottom-width: 0px;
+      }
+      .submit-search{
+        width: 30px;
+        aspect-ratio: 1/1; 
+        background-color: var(--dark);  
+        mask: url('/images/search.png') no-repeat center / contain;
+        transform: scale(.9);
+        transition: transform .2s cubic-bezier(0.2,-1,0.4,1.4);
+        overflow: hidden;
+        &:hover{
+          transform: scale(1);
+        }
+      }
+      .start-img{
+        width: 100%;
+        height: 100%;
+        /* background-color: aqua; */
+        z-index: 0;
+        position: relative;
+        display: flex;
+        justify-content: center;
+      }
+      
+      .start-article{
+        width: 80%;
+        min-height: 200px;
+        height: 34vw;
+        position: absolute;
+        background-color:rgba(210,210,210,.3);
+        backdrop-filter: blur(10px);
+        z-index: 2;
+        padding: 0px;
+        margin: 0px;
+        bottom: 0px;
+        border-radius: 20px;
+        border-width: 10px;
+        border-style: solid;
+        border-color: var(--orange);
+        border-top-width: 6vw;
+      }
+      .large-card{
+        display: flex;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        box-sizing: border-box;
+        align-items: center;
+        height: 60vw;
+        background-color: brown;
+        background-color: var(--dark);
+        margin: 0px;
+        padding-left: 22px;
+      }
+      
+
+
+    </style>
+  </head>
+  <body>
+  
+    <div class="title">
+      <button class="up-button" style="mask: url('/images/hamburger.png') no-repeat center / contain;"></button>
+      <div class="up-input">
+        <input placeholder="Search" style="font-size: larger; height:100%;width:86%;background-color:var(--light);outline:none;border:none;" type="text">
+        <button class="submit-search"></button>
+      </div>
+      <button class="up-button" style="mask: url('/images/settings.png') no-repeat center / contain;"></button>
+    </div>
+
+    <div style="display:flex;justify-content: center;height: 100%;width: 100%;position: relative;aspect-ratio: 16/13;">
+      <div class="start-img">
+        <p style="position: absolute;font-size:10vw;z-index: 6;margin: 0px; top: 4vw; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-weight: 700;">Hello</p>
+        <img style="filter: grayscale(); height: 100%; width: 100%;object-fit: cover;" src="/images/landscape.jpg">
+        <div style="width: 100%;height: 30vw ;z-index: 4;position: absolute;background:linear-gradient(to top,var(--dark) ,var(--dark),transparent);bottom: 0px;"></div>
+      </div>
+
+      <div class="start-article">
+        <p style="position: relative;transform: translate(0px,-4.8vw); top: 0px; z-index: 4; color:black;margin: 0px;margin-left: 10px; font-size: 2.6vw; font-weight: 700;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Publisher: Elad Shayo</p>
+        <p style="margin: 0px;padding: 0px;position: absolute;top: .5vw;left: 1.6vw;height: 100%;width: 80%;color: black; font-size: 2.1vw; font-weight: 600;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"><strong>Ferrets</strong><br>Ferrets known as European polecats,
+          <br> are small carnivorous mammals that belong to the weasel family.
+          <br> They have a long, slender body, short legs, and a pointed nose.
+          <br><br> Ferrets are known for their playful and curious nature.
+          <br> They are often kept as pets and require a diet of meat-based proteins.
+          <br> Ferrets are also used for hunting rabbits in some countries due to
+          their ability to chase rabbits out of their burrows.
+        </p>
+      </div>
+      
+    </div>
+
+    <div style="width: 100%;height: 10vw;background-color: var(--dark);"></div>
+
+    <div class="large-card">
+      
+    </div>
+
+
+  </body>
+</html>
